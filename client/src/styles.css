@@ -1,0 +1,174 @@
+/*--------------------------------------------------------------------
+                    OVERALL STYLE SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+:root {
+  --white: #fff;
+  --green: #158871;
+  --light-green: #cefef5;
+  --black: #000;
+  --red: #ff0000;
+  --border: 0.1rem solid var(--green);
+  --white-border: 0.1rem solid var(--white);
+  --invisible-border: 0.1rem solid transparent;
+  --box-shadow: 0px 2px 20px 2px var(--white);
+  --green-box-shadow: 0px 2px 20px 2px var(--green);
+  --text-shadow: 0.1rem 0.1rem 0.1rem var(--white);
+  --overlay-bg: linear-gradient(#171717b9 0%, #171717b9 100%);
+
+
+  --navbar-scroll: transparent;
+  --navbar-scroll-border: none;
+  --navbar-scroll-shadow: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+  max-height: 90%;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--green);
+}
+
+/* overall style section ends here */
+
+/*--------------------------------------------------------------------
+                  OVERALL BUTTON STYLE STARTS HERE
+--------------------------------------------------------------------*/
+
+.btn {
+  color: var(--white);
+  background: var(--green);
+  border: var(--border);
+}
+
+.main-btn {
+  color: var(--green);
+  background: var(--white);
+  border: var(--white-border);
+}
+
+.btn,
+.main-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.btn span,
+.main-btn span {
+  padding-top: 0.3rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+
+.main-btn:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn:hover span,
+.main-btn:hover span {
+  margin-left: 0.5rem;
+  transition: 0.2s linear;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--green);
+}
+
+/* overall button style ends here */
+
+/*--------------------------------------------------------------------
+                    OVERALL HEADING STYLE STARTS HERE
+--------------------------------------------------------------------*/
+
+.heading {
+  height: 20rem;
+  width: 100%;
+  position: relative;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-bg);
+  z-index: 2;
+}
+
+.heading img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.heading .heading-content {
+  text-align: center;
+  font-weight: 100;
+}
+
+.heading .heading-content h3 {
+  letter-spacing: .2rem;
+  position: absolute;
+  text-transform: capitalize;
+  color: var(--white);
+  font-size: 3.5rem;
+  width: 100%;
+  text-align: center;
+  margin-top: -14rem;
+  z-index: 3;
+}
+
+.heading .heading-content p {
+  position: absolute;
+  color: var(--white);
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: -9rem;
+  z-index: 3;
+  letter-spacing: .1rem;
+}
+
+.heading .heading-content p a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.heading .heading-content p a:hover {
+  text-decoration: line-through;
+  color: var(--light-green);
+}
+
+/* Overall heading ends here  */

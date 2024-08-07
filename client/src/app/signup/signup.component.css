@@ -1,0 +1,244 @@
+/*--------------------------------------------------------------------
+                      REGISTER SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+.register-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../assets/Home_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.register-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-bg);
+  z-index: 2;
+}
+
+.register-contents {
+  background: transparent;
+  border-radius: 1rem;
+  z-index: 3;
+  backdrop-filter: blur(1rem);
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border: var(--white-border);
+  padding: 1.5rem;
+  width: 28rem;
+}
+
+.register-contents .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-content: center;
+  border-top-right-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.register-contents .close:hover {
+  border: var(--white-border);
+  background: transparent;
+  color: var(--white);
+}
+
+.register-contents .register-title {
+  margin: 0.5rem auto;
+  text-align: center;
+  color: var(--green);
+  text-shadow: var(--text-shadow);
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+.register-contents .register-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  margin: 1rem auto;
+  padding: 1rem 1rem 0 0;
+  border-bottom: var(--white-border);
+}
+
+.register-contents .register-content:hover {
+  border-bottom: var(--border);
+  transition: 0.3s;
+  transform-origin: right;
+}
+
+.register-content i {
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.register-content input::placeholder {
+  position: absolute;
+  left: 0.5rem;
+  top: 46%;
+  transform: translateY(-50%);
+  margin-left: 0.2rem;
+  color: var(--white);
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.register-content input {
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--white);
+}
+
+.register-contents .register-content.one {
+  margin-top: 0;
+}
+
+.register-contents .register-content.two {
+  margin-bottom: 0.4rem;
+}
+
+.register-contents .register-btn {
+  border: var(--white-border);
+  color: var(--green);
+  padding: 0.2rem;
+  font-size: 1.8rem;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.register-contents .register-btn:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+.register-contents .register-login {
+  font-size: 1.4rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.register-contents .register-login a {
+  color: var(--green);
+  letter-spacing: 0.1rem;
+}
+
+.register-contents .register-login a:hover {
+  color: var(--green);
+  text-shadow: var(--text-shadow);
+  text-decoration: line-through;
+}
+
+.register-contents .information-error {
+  display: flex;
+  position: fixed;
+  margin-top: -0.6rem;
+}
+
+.register-contents .information-error .error {
+  position: relative;
+  font-size: 1rem;
+  margin-right: 0.2rem;
+  color: var(--red);
+}
+
+.register-contents .information-error .success {
+  position: relative;
+  font-size: 1rem;
+  margin-right: 0.2rem;
+  color: var(--green);
+}
+
+/* Register section ends here */
+
+/*--------------------------------------------------------------------
+                      ACTIVE MESSAGE SECTION STARTS HERE
+--------------------------------------------------------------------*/
+
+.active-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+}
+
+.active-container .active-content {
+  position: relative;
+  height: fit-content;
+  padding: 1rem 1.8rem;
+  background-color: var(--white);
+  text-align: center;
+  margin-top: 15rem;
+  border-radius: .5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  z-index: 10000;
+}
+
+.active-container .active-content img {
+  height: 6rem;
+  width: 6rem;
+}
+
+.active-container .active-content .message {
+  font-size: 2rem;
+}
+
+.active-container .active-content .messageBtn {
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  font-size: 1.8rem;
+  padding: .3rem 1rem;
+  border-radius: 25rem;
+  border: var(--border);
+}
+
+.active-container .active-content .messageBtn:hover {
+  cursor: pointer;
+}
+
+.success {
+  color: var(--green);
+}
+
+.failure {
+  color: var(--red);
+}
+
+/* Active Message section ends here */

@@ -1,0 +1,35 @@
+<!-- Register section starts here -->
+
+<section class="register">
+
+  <div class="register-container">
+
+    <form class="register-contents" (ngSubmit)="submitList(username.value, pass.value)">
+
+      <h2 class="register-title">Register</h2>
+
+      <div class="register-content one">
+
+        <i class="fas fa-user"></i>
+        <input type="text" autocomplete="off" name="username" placeholder="Username" #username />
+
+      </div>
+
+      <div class="register-content one">
+
+        <i class="fas fa-lock"></i>
+        <input type="text" autocomplete="off" name="password" placeholder="Password" #pass/>
+
+      </div>
+
+      <button type="submit" class="register-btn">Register</button>
+
+      <p class="register-login">Already have an account ? <a routerLink="/login">Login</a></p>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- Register section ends here -->
