@@ -19,6 +19,10 @@ const pool = new Pool({
 app.use(cors());
 app.use(bodyParser.json());
 
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
+
 // User signup
 app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
@@ -56,8 +60,4 @@ app.post("/login", async (req, res) => {
   } catch (err) {
     res.status(500).send(err.message);
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
 });
