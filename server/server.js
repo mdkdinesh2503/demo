@@ -16,7 +16,12 @@ const pool = new Pool({
   database: "crud",
 });
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:4200',
+  methods: 'GET, POST, PUT, PATCH, DELETE, HEAD',
+  credentials: true,
+}));
+
 app.use(bodyParser.json());
 
 app.listen(port, () => {
@@ -61,3 +66,19 @@ app.post("/login", async (req, res) => {
     res.status(500).send(err.message);
   }
 });
+
+pool.on("end", () => {
+  console.log("\nEnded - PostGres Database!!");
+});
+
+pool.on("connect", () => {
+  console.log("\nConnected - PostGres Database!!");
+});
+
+// client.connect((err) => {
+//   if (err) {
+//     console.log("\nError - [PostGres] Database Connection!!\n", err);
+//   } else {
+//     console.log("\nConnected - PostGres Database!!\n");
+//   }
+// });
